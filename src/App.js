@@ -1,10 +1,13 @@
-import './App.css';
+import GlobalStyle from './GlobalStyle';
+import Theme from './Theme';
+import Section1 from './components/Section1/Section1';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>hii</h1>
-    </div>
+    <Theme>
+      <GlobalStyle />
+      <Section1 />
+    </Theme>
   );
 }
 
