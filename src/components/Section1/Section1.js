@@ -2,7 +2,7 @@ import React from 'react'
 import { SectionOne, LeftContent, Logo , Text, CarImages, Car1, Car2, Car3, RightContent } from './Styles'
 
 import LogoSrc from '../../assets/images/logo-white.svg'
-import arrow from '../../assets/images/arrow.svg'
+import arrow from '../../assets/images/arrow-right.svg'
 import car1 from '../../assets/images/car1.png'
 import car2 from '../../assets/images/car2.png'
 import car3 from '../../assets/images/car3.png'
