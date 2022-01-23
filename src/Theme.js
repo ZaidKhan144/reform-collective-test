@@ -9,7 +9,7 @@ const theme = {
         lightGrey: '#4B5168',
         darkGrey: '#1B1E28',
         cardBackground: '#f5f5f7',
-        cardText: '#2b3144'
+        greyText: '#2b3144'
     },
 
     zIndex: {

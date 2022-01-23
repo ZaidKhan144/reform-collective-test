@@ -133,7 +133,7 @@ export const Text = styled.div`
         line-height: 98px;
         letter-spacing: -0.46px;
         margin: 0;
-        color: ${({ theme: { colors } }) => colors.cardText };
+        color: ${({ theme: { colors } }) => colors.greyText };
     }
 
     & p {

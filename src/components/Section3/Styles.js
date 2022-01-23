@@ -23,7 +23,7 @@ export const Text = styled.div`
         letter-spacing: -0.45px;
         text-align: left;
         margin: 0;
-        color: ${({ theme: { colors } }) => colors.cardText };
+        color: ${({ theme: { colors } }) => colors.greyText };
     }
 
     & p {
