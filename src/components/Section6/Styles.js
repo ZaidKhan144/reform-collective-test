@@ -86,6 +86,7 @@ export const Text = styled.div`
             text-align: left;
             font-weight: bold;
             margin: 0;
+            color: ${({ theme: { colors } }) => colors.grey };
         }
     }
 `;
