@@ -9,7 +9,8 @@ const theme = {
         lightGrey: '#4B5168',
         darkGrey: '#1B1E28',
         cardBackground: '#f4f4f5',
-        greyText: '#2b3144'
+        greyText: '#2b3144',
+        linkColor: '#4F5874'
     },
 
     zIndex: {
