@@ -75,7 +75,7 @@ export const Text = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 30%;
+        width: 40%;
         margin-top: 30px;
 
         & p{
