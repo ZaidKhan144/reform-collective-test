@@ -11,6 +11,7 @@ export const SectionTwo = styled.section`
         flex-direction: column-reverse;
         /* width: 100%; */
         padding-top: 120px;
+        padding-bottom: 150px;
     }
 `;
 
