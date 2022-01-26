@@ -4,6 +4,10 @@ export const SectionSix = styled.div`
     padding-left: 96px;
     padding-right: 96px;
     display: flex;
+
+    @media (max-width: 1024px) {
+        
+    }
 `;
 
 export const LeftContent = styled.div`
