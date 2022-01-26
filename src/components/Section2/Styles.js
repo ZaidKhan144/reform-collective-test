@@ -1,9 +1,17 @@
 import styled from 'styled-components'
 
-export const SectionTwo = styled.div`
+export const SectionTwo = styled.section`
     padding: 300px 96px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column-reverse;
+        /* width: 100%; */
+        padding-top: 120px;
+    }
 `;
 
 export const LeftContent = styled.div`
@@ -16,6 +24,13 @@ export const LeftContent = styled.div`
     /* display: flex;
     flex-direction: column;
     justify-content: flex-start; */
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 50px;
+        height: 400px
+    }
 `;
 
 export const Arrows = styled.div`
@@ -29,9 +44,17 @@ export const Arrows = styled.div`
     justify-content: flex-end;
     align-items: center;
     z-index: ${({ theme: { zIndex } }) => zIndex.z5 };
+
+    @media (max-width: 1024px) {
+        padding: 35px 40px
+    }
     
     & img {
         cursor: pointer;
+        
+        @media (max-width: 1024px) {
+            width: 9%;
+        }
     }
 
     & img:first-child {
@@ -52,6 +75,11 @@ export const CarDesc = styled.div`
       font-size: 64px;
       line-height: 75px;
       margin: 0;
+
+        @media (max-width: 1024px) {
+            font-size: 40px;
+            line-height: 46.88px;
+        }
    }
 
    & p {
@@ -61,7 +89,7 @@ export const CarDesc = styled.div`
        color: ${({ theme: { colors } }) => colors.lightGrey };
        font-weight: bold;
        margin-top: 0px;
-       margin-bottom: 60px;
+       margin-bottom: 30px;
    }
 `;
 
@@ -71,12 +99,17 @@ export const CarConfig = styled.div`
     width: auto;
     margin-bottom: 10px;
     text-align: left;
+
     
     & div:first-child {
         display: flex;
         align-items: center;
         margin-right: 20px;
         width: 76px;
+
+        @media (max-width: 1024px) {
+            margin-right: 10px;
+        }
 
         & img {
             margin-right: 15px;
@@ -106,6 +139,12 @@ export const Car = styled.div`
     left: 120px; 
     bottom: -70px;
 
+    @media (max-width: 1024px) {
+        width: 100%;
+        left: 0px;
+        bottom: -40px;
+    }
+
     & img {
         display: block;
     }
@@ -124,6 +163,14 @@ export const RightContent = styled.div`
     /* justify-content: flex-start; */
     width: 60%;
     height: 600px;
+
+    @media (max-width: 1024px) {
+        padding-left: 0;
+        padding-top: 0;
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
 `;
 
 export const Text = styled.div`
@@ -134,6 +181,12 @@ export const Text = styled.div`
         letter-spacing: -0.46px;
         margin: 0;
         color: ${({ theme: { colors } }) => colors.greyText };
+
+        @media (max-width: 1024px) {
+            font-size: 45px;
+            line-height: 48px;
+            letter-spacing: -0.22px;
+        }
     }
 
     & p {
@@ -142,5 +195,9 @@ export const Text = styled.div`
         line-height: 26px;
         letter-spacing: -0.47px;
         width: 65%;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
     }
 `;

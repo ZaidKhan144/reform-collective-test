@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SectionThree = styled.div`
+export const SectionThree = styled.section`
     display: flex;
     align-items: center;
     padding-left: 96px;
