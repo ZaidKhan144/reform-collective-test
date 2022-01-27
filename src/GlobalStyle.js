@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: white;
 
         @media (max-width: 1024px) {
-            overflow: hidden;
+            ${'' /* overflow: hidden; */}
         }
     }
 

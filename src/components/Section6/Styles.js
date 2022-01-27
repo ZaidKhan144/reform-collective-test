@@ -6,7 +6,10 @@ export const SectionSix = styled.section`
     display: flex;
 
     @media (max-width: 1024px) {
-        
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 `;
 
@@ -17,11 +20,22 @@ export const LeftContent = styled.div`
     position: relative;
     margin-right: 98px;
 
+    @media (max-width: 1024px) {
+        width: calc(100% + 25px + 25px);
+        margin-right: 0px;
+        height: 500px;
+    }
+
     & img:first-child {
         position: absolute;
         bottom: 0;
         left: 20%;
         width: 50%;
+
+        @media (max-width: 1024px) {
+            left: 15%;
+            width: 70%;
+        }
     }
 
     & img:nth-child(2) {
@@ -29,6 +43,10 @@ export const LeftContent = styled.div`
         bottom: -10%;
         left: 50%;
         width: 160%;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 `;
 
@@ -37,6 +55,10 @@ export const RightContent = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 50%;
+
+    @media (max-width: 1024px) {
+        width: 100%;   
+    }
 `;
 
 export const Text = styled.div`
@@ -48,6 +70,12 @@ export const Text = styled.div`
         text-align: left;
         color: ${({ theme: { colors } }) => colors.greyText };
         margin: 0;
+
+        @media (max-width: 1024px) {
+            font-size: 45px;
+            line-height: 48px;
+            letter-spacing: -0.22px;
+        }
     }
 
     & p:nth-child(2) {
@@ -57,6 +85,10 @@ export const Text = styled.div`
         letter-spacing: -0.47px;
         text-align: left;
         width: 70%;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
     }
 
     & p:nth-child(3) {
@@ -73,6 +105,10 @@ export const Text = styled.div`
         height: 2px;
         background-color: ${({ theme: { colors } }) => colors.cardBackground };
         margin-top: 40px;
+
+        @media (max-width: 1024px) {
+            margin-top: 20px;
+        }
     }
 
     & span:nth-child(5) {
@@ -81,6 +117,11 @@ export const Text = styled.div`
         justify-content: space-between;
         width: 40%;
         margin-top: 30px;
+
+        @media (max-width: 1024px) {
+            width: 60%;
+            margin-top: 20px;
+        }
 
         & p{
             font-family: Eina03;
