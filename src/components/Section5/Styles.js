@@ -5,6 +5,11 @@ export const SectionFive = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        padding: 100px 0px;
+        flex-direction: column;
+    }
 `;
 
 export const Card = styled.div`
@@ -16,6 +21,11 @@ export const Card = styled.div`
     align-items: center;
     justify-content: center;
     padding: 50px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
     & img {
         height: 50%;
