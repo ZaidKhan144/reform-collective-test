@@ -12,6 +12,7 @@ export const SectionThree = styled.section`
         padding-right: 20px;
         padding-left: 20px;
         flex-direction: column;
+        margin-bottom: 200px;
     }
 `;
 
