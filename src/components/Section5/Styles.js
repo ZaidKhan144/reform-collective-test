@@ -6,7 +6,7 @@ export const SectionFive = styled.section`
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding: 100px 0px;
         flex-direction: column;
     }
@@ -22,7 +22,7 @@ export const Card = styled.div`
     justify-content: center;
     padding: 50px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
         margin-bottom: 20px;
     }

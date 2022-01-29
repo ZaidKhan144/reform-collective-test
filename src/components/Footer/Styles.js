@@ -8,7 +8,7 @@ export const FooterSection = styled.div`
     justify-content: space-between;
     border-top: 2px solid ${({ theme: { colors } }) => colors.cardBackground };
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding-bottom: 80px;
         width: calc(100% - 20px - 20px);
         margin: 50px 0 0 30px;
@@ -21,7 +21,7 @@ export const Links = styled.div`
     align-items: center;
     width: 20%;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         display: none;
     }
 

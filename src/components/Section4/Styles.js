@@ -7,10 +7,11 @@ export const SectionFour = styled.section`
     padding-right: 96px;
     justify-content: space-between;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding-right: 20px;
         padding-left: 20px;
         flex-direction: column-reverse;
+        width: 100%;
     }
 `;
 
@@ -23,7 +24,7 @@ export const LeftContent = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
         left: -20%;
         height: 600px;
@@ -36,7 +37,7 @@ export const LeftContent = styled.div`
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
         border-radius: 30px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             border-radius: 25px; 
         }
     }
@@ -45,7 +46,7 @@ export const LeftContent = styled.div`
 export const RightContent = styled.div`
     width: 50%;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -61,7 +62,7 @@ export const Text = styled.div`
         color: ${({ theme: { colors } }) => colors.greyText };
         margin: 0;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             font-size: 45px;
             line-height: 48px;
             letter-spacing: -0.22px;
@@ -77,7 +78,7 @@ export const Text = styled.div`
         text-align: left;
         width: 60%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 100%;
         }
     }

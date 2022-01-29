@@ -5,11 +5,11 @@ export const SectionTwo = styled.section`
     display: flex;
     align-items: center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding-left: 20px;
         padding-right: 20px;
         flex-direction: column-reverse;
-        /* width: 100%; */
+        width: 100%;
         padding-top: 120px;
         padding-bottom: 150px;
     }
@@ -26,7 +26,7 @@ export const LeftContent = styled.div`
     flex-direction: column;
     justify-content: flex-start; */
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
         padding-left: 30px;
         padding-top: 50px;
@@ -46,14 +46,14 @@ export const Arrows = styled.div`
     align-items: center;
     z-index: ${({ theme: { zIndex } }) => zIndex.z5 };
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding: 35px 40px
     }
     
     & img {
         cursor: pointer;
         
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 9%;
         }
     }
@@ -77,7 +77,7 @@ export const CarDesc = styled.div`
       line-height: 75px;
       margin: 0;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             font-size: 40px;
             line-height: 46.88px;
         }
@@ -108,7 +108,7 @@ export const CarConfig = styled.div`
         margin-right: 20px;
         width: 76px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             margin-right: 10px;
         }
 
@@ -140,7 +140,7 @@ export const Car = styled.div`
     left: 120px; 
     bottom: -70px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
         left: 0px;
         bottom: -40px;
@@ -165,7 +165,7 @@ export const RightContent = styled.div`
     width: 60%;
     height: 600px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding-left: 0;
         padding-top: 0;
         width: 100%;
@@ -183,7 +183,7 @@ export const Text = styled.div`
         margin: 0;
         color: ${({ theme: { colors } }) => colors.greyText };
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             font-size: 45px;
             line-height: 48px;
             letter-spacing: -0.22px;
@@ -197,7 +197,7 @@ export const Text = styled.div`
         letter-spacing: -0.47px;
         width: 65%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 100%;
         }
     }

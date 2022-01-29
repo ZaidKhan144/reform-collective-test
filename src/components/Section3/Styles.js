@@ -8,7 +8,7 @@ export const SectionThree = styled.section`
     justify-content: space-between;
     margin-bottom: 400px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding-right: 20px;
         padding-left: 20px;
         flex-direction: column;
@@ -20,7 +20,7 @@ export const LeftContent = styled.div`
     width: 35%;
     height: 230px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
         height: auto;
     }
@@ -37,8 +37,9 @@ export const Text = styled.div`
         margin: 0;
         color: ${({ theme: { colors } }) => colors.greyText };
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             font-size: 45px;
+            height: auto;
             line-height: 48px;
             letter-spacing: -0.22px;
         }
@@ -54,9 +55,10 @@ export const Text = styled.div`
         margin-top: 30px;
         width: 338px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 100%;
             margin-top: 15px;
+            height: auto;
         }
     }
 `;
@@ -66,7 +68,7 @@ export const RightContent = styled.div`
     height: 400px;
     width: 60%;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: calc(100% + 30px + 30px);
         margin-top: 100px;
         height: 500px;
@@ -78,7 +80,7 @@ export const RightContent = styled.div`
         left: -30%;
         bottom: -25%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             display: none;
         }
     }
@@ -90,7 +92,7 @@ export const RightContent = styled.div`
         width: 300px;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 50%;
             top: -15%;
             left: 25%;

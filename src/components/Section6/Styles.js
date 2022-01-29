@@ -5,7 +5,7 @@ export const SectionSix = styled.section`
     padding-right: 96px;
     display: flex;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         padding-left: 20px;
         padding-right: 20px;
         flex-direction: column-reverse;
@@ -20,7 +20,7 @@ export const LeftContent = styled.div`
     position: relative;
     margin-right: 98px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: calc(100% + 25px + 25px);
         margin-right: 0px;
         height: 500px;
@@ -44,7 +44,7 @@ export const LeftContent = styled.div`
         left: 50%;
         width: 160%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             display: none;
         }
     }
@@ -56,7 +56,7 @@ export const RightContent = styled.div`
     justify-content: center;
     width: 50%;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;   
     }
 `;
@@ -71,7 +71,7 @@ export const Text = styled.div`
         color: ${({ theme: { colors } }) => colors.greyText };
         margin: 0;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             font-size: 45px;
             line-height: 48px;
             letter-spacing: -0.22px;
@@ -86,7 +86,7 @@ export const Text = styled.div`
         text-align: left;
         width: 70%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 100%;
         }
     }
@@ -106,7 +106,7 @@ export const Text = styled.div`
         background-color: ${({ theme: { colors } }) => colors.cardBackground };
         margin-top: 40px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             margin-top: 20px;
         }
     }
@@ -118,7 +118,7 @@ export const Text = styled.div`
         width: 40%;
         margin-top: 30px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             width: 60%;
             margin-top: 20px;
         }

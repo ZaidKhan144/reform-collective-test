@@ -14,10 +14,6 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
 	    padding: 0;
         background-color: white;
-
-        @media (max-width: 1024px) {
-            ${'' /* overflow: hidden; */}
-        }
     }
 
     html {
@@ -84,8 +80,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0 96px 0 96px;
         width: 100%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             padding: 0 25px 0 25px;
+            ${'' /* overflow: hidden; */}
+            width: 100%;
         }
     }
 

@@ -9,11 +9,9 @@ export const SectionOne = styled.section`
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 1024px) {
-        width: 100%;
+    @media (max-width: 1025px) {
         flex-direction: column;
-        justify-content: none;
-        height: 340px;
+        height: 350px;
         position: relative;
     }
 `;
@@ -21,8 +19,9 @@ export const SectionOne = styled.section`
 export const LeftContent = styled.div`
     width: 70%;
 
-    @media (max-width: 1024px) {
-        width: 100%;
+    @media (max-width: 1025px) {
+        width: auto;
+        height: 100%;
     }
 `;
 
@@ -30,8 +29,9 @@ export const Logo = styled.img`
     width: 225px;
     height: 18px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         /* width: 100%; */
+        height: auto;
     }
 `;
 
@@ -39,9 +39,9 @@ export const Text = styled.div`
     position: relative;
     top: 90px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         top: 50px;
-        width: 80%;
+        width: 90%;
     }
 
     & h1 {
@@ -55,7 +55,7 @@ export const Text = styled.div`
         text-transform: uppercase;
         margin: 0;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             font-size: 53px;
             line-height: 52px;
             letter-spacing: -1.49px;
@@ -74,7 +74,7 @@ export const Text = styled.div`
             font-weight: bold;
             color: ${({ theme: { colors } }) => colors.grey };
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1025px) {
                 margin: 0;
             }
         }
@@ -82,7 +82,7 @@ export const Text = styled.div`
             display: block;
             margin-left: 40px;
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1025px) {
                 width: 10%;
                 margin-left: 20px;
             }
@@ -99,9 +99,9 @@ export const CarImages = styled.div`
     top: 600px;
     left: 0;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 100%;
-        top: 300px;
+        top: 330px;
         bottom: 0;
         height: auto;
     }
@@ -112,7 +112,7 @@ export const Car1 = styled.img`
     transform: translate(85%);
     position: absolute;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         transform: translate(75%);
     }
 `;
@@ -122,7 +122,7 @@ export const Car2 = styled.img`
     position: absolute;
     transform: scaleX(-1) translate(24%);
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         transform: scaleX(-1) translate(10%);
     }
 `;
@@ -133,7 +133,7 @@ export const Car3 = styled.img`
     width: 80%;
     transform: translate(13%, 12%);
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         width: 70%;
         transform: translate(20%, 15%);
     }
@@ -144,7 +144,7 @@ export const RightContent = styled.div`
     box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
     border-radius: 37px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1025px) {
         display: none;
     }
 `;
