@@ -15,7 +15,8 @@ export const SectionSix = styled.section`
 
 export const LeftContent = styled.div`
     background-color: ${({ theme: { colors } }) => colors.yellow };
-    height: 700px;
+    /* height: 700px; */
+    height: 35vw;
     width: 50%;
     position: relative;
     margin-right: 98px;
@@ -23,16 +24,17 @@ export const LeftContent = styled.div`
     @media (max-width: 1025px) {
         width: calc(100% + 25px + 25px);
         margin-right: 0px;
-        height: 500px;
+        /* height: 500px; */
+        height: 120vw;
     }
 
     & img:first-child {
         position: absolute;
         bottom: 0;
-        left: 20%;
+        left: 25%;
         width: 50%;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1025px) {
             left: 15%;
             width: 70%;
         }
@@ -41,8 +43,8 @@ export const LeftContent = styled.div`
     & img:nth-child(2) {
         position: absolute;
         bottom: -10%;
-        left: 50%;
-        width: 160%;
+        left: 25%;
+        width: 100%;
 
         @media (max-width: 1025px) {
             display: none;
@@ -70,11 +72,13 @@ export const Text = styled.div`
         text-align: left;
         color: ${({ theme: { colors } }) => colors.greyText };
         margin: 0;
+        max-width: 90%;
 
         @media (max-width: 1025px) {
             font-size: 45px;
             line-height: 48px;
             letter-spacing: -0.22px;
+            max-width: 100%;
         }
     }
 
@@ -104,7 +108,8 @@ export const Text = styled.div`
         width: 100%;
         height: 2px;
         background-color: ${({ theme: { colors } }) => colors.cardBackground };
-        margin-top: 40px;
+        margin-top: 30px;
+        margin-bottom: 0px;
 
         @media (max-width: 1025px) {
             margin-top: 20px;
@@ -114,13 +119,11 @@ export const Text = styled.div`
     & span:nth-child(5) {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 40%;
-        margin-top: 30px;
+        margin-top: 5px;
 
         @media (max-width: 1025px) {
-            width: 60%;
             margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         & p{
@@ -131,6 +134,7 @@ export const Text = styled.div`
             text-align: left;
             font-weight: bold;
             margin: 0;
+            margin-right: 4vw;
             color: ${({ theme: { colors } }) => colors.grey };
         }
     }

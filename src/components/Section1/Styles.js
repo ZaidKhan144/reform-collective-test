@@ -11,8 +11,11 @@ export const SectionOne = styled.section`
 
     @media (max-width: 1025px) {
         flex-direction: column;
-        height: 350px;
+        /* height: 120vw; */
         position: relative;
+        width: 100%;
+        /* height: 430px; */
+        height: 560px;
     }
 `;
 
@@ -20,7 +23,7 @@ export const LeftContent = styled.div`
     width: 70%;
 
     @media (max-width: 1025px) {
-        width: auto;
+        width: 100%;
         height: 100%;
     }
 `;
@@ -54,11 +57,13 @@ export const Text = styled.div`
         font-weight: bold;
         text-transform: uppercase;
         margin: 0;
+        max-width: 80%;
 
         @media (max-width: 1025px) {
             font-size: 53px;
             line-height: 52px;
             letter-spacing: -1.49px;
+            max-width: 100%;
         }
     }
 
@@ -78,12 +83,13 @@ export const Text = styled.div`
                 margin: 0;
             }
         }
+        
         & img {
             display: block;
             margin-left: 40px;
 
             @media (max-width: 1025px) {
-                width: 10%;
+                width: 8%;
                 margin-left: 20px;
             }
         }
@@ -141,8 +147,17 @@ export const Car3 = styled.img`
 
 export const RightContent = styled.div`
     z-index: ${({ theme: { zIndex } }) => zIndex.z5 };
-    box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
-    border-radius: 37px;
+    
+    & img {
+        display: block;
+        width: 20vw;
+        height: 42vw;
+        position: absolute;
+        top: 10%;
+        right: 135px;
+        box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
+        border-radius: 2vw; 
+    }
 
     @media (max-width: 1025px) {
         display: none;

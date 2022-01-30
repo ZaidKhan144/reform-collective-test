@@ -9,22 +9,27 @@ export const SectionFive = styled.section`
     @media (max-width: 1025px) {
         padding: 100px 0px;
         flex-direction: column;
+        width: 100%;
     }
 `;
 
 export const Card = styled.div`
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 25vw;
     background-color: ${({ theme: { colors } }) => colors.cardBackground };
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    /* padding: 67px; */
+    padding: 3.5vw;
 
     @media (max-width: 1025px) {
         width: 100%;
         margin-bottom: 20px;
+        height: 80vw;
+        padding-bottom: 12vw;
+        padding-top: 12vw;
     }
 
     & img {
@@ -39,6 +44,11 @@ export const Card = styled.div`
         text-align: left;
         margin: 0;
         color: ${({ theme: { colors } }) => colors.greyText };
+
+        @media (max-width: 1025px) {
+            font-size: 7vw;
+            line-height: 70px;
+        }
     }
 
     & p {
@@ -49,5 +59,11 @@ export const Card = styled.div`
         text-align: left;
         margin: 0;
         width: 90%;
+
+        @media (max-width: 1025px) {
+            /* width: 100%; */
+            font-size: 4vw;
+            line-height: 5.5vw;
+        }
     }
 `;

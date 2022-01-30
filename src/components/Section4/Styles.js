@@ -18,61 +18,72 @@ export const SectionFour = styled.section`
 export const LeftContent = styled.div`
     background-color: ${({ theme: { colors } }) => colors.yellow };
     width: 35%;
-    height: 700px;
+    /* height: 700px; */
+    height: 60vw;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media (max-width: 1025px) {
-        width: 100%;
+        width: 80%;
         left: -20%;
-        height: 600px;
+        /* height: 600px; */
+        height: 110vw;
     }
 
     & img:nth-child(2) {
         position: absolute;
-        left: 60%;
-        width: 60%;
+        left: 55%;
+        width: 70%;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
-        border-radius: 30px;
+        border-radius: 2.2vw;
 
         @media (max-width: 1025px) {
-            border-radius: 25px; 
+            border-radius: 4vw;
+            height: 80%;
+            width: auto;
+            left: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 `;
 
 export const RightContent = styled.div`
-    width: 50%;
+    max-width: 45%;
 
     @media (max-width: 1025px) {
-        width: 100%;
-        margin-bottom: 20px;
+        max-width: 100%;
+        margin-bottom: 100px;
     }
 `;
 
 export const Text = styled.div`
     & h2 {
         font-family: Bebas Neue;
-        font-size: 95px;
-        line-height: 98px;
+        /* font-size: 95px;
+        line-height: 98px; */
+        font-size: 5vw;
+        line-height: 5vw;
         letter-spacing: -0.45px;
         text-align: left;
         color: ${({ theme: { colors } }) => colors.greyText };
         margin: 0;
+        max-width: 90%;
 
         @media (max-width: 1025px) {
             font-size: 45px;
             line-height: 48px;
             letter-spacing: -0.22px;
-            width: 100%;
+            max-width: 100%;
         }
     }
 
     & p {
         font-family: Eina03;
-        font-size: 16px;
+        /* font-size: 16px; */
+        font-size: 1vw;
         line-height: 26px;
         letter-spacing: -0.47px;
         text-align: left;
@@ -80,6 +91,7 @@ export const Text = styled.div`
 
         @media (max-width: 1025px) {
             width: 100%;
+            font-size: 3.5vw;
         }
     }
 `;

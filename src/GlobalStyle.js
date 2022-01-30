@@ -82,7 +82,7 @@ const GlobalStyle = createGlobalStyle`
 
         @media (max-width: 1025px) {
             padding: 0 25px 0 25px;
-            ${'' /* overflow: hidden; */}
+            overflow: hidden;
             width: 100%;
         }
     }

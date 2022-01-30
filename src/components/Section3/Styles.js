@@ -17,12 +17,13 @@ export const SectionThree = styled.section`
 `;
 
 export const LeftContent = styled.div`
-    width: 35%;
+    max-width: 30%;
     height: 230px;
 
     @media (max-width: 1025px) {
-        width: 100%;
+        max-width: 100%;
         height: auto;
+        margin-bottom: 20px;
     }
 `;
 
@@ -30,8 +31,10 @@ export const Text = styled.div`
     
     & h2 {
         font-family: Bebas Neue;
-        font-size: 95px;
-        line-height: 98px;
+        /* font-size: 95px;
+        line-height: 98px; */
+        font-size: 5vw;
+        line-height: 5vw;
         letter-spacing: -0.45px;
         text-align: left;
         margin: 0;
@@ -47,7 +50,8 @@ export const Text = styled.div`
 
     & p {
         font-family: Eina03;
-        font-size: 16px;
+        /* font-size: 16px; */
+        font-size: 1vw;
         line-height: 26px;
         letter-spacing: -0.47px;
         text-align: left;
@@ -58,6 +62,7 @@ export const Text = styled.div`
         @media (max-width: 1025px) {
             width: 100%;
             margin-top: 15px;
+            font-size: 3.5vw;
             height: auto;
         }
     }
@@ -65,20 +70,23 @@ export const Text = styled.div`
 
 export const RightContent = styled.div`
     position: relative;
-    height: 400px;
+    /* height: 400px; */
+    height: 32vw;
     width: 60%;
 
     @media (max-width: 1025px) {
-        width: calc(100% + 30px + 30px);
+        width: calc(100% + 20px + 20px);
         margin-top: 100px;
-        height: 500px;
+        /* height: 500px; */
+        height: 120vw;
     }
 
     & img:nth-child(2) {
         position: absolute;
-        width: 500px;
-        left: -30%;
-        bottom: -25%;
+        /* width: 500px; */
+        width: 40vw;
+        left: -40%;
+        bottom: -10%;
 
         @media (max-width: 1025px) {
             display: none;
@@ -87,15 +95,18 @@ export const RightContent = styled.div`
 
     & img:nth-child(3) {
         position: absolute;
-        left: 40%;
-        top: -25%;
-        width: 300px;
+        left: 50%;
+        top: -10%;
+        /* width: 300px; */
+        width: 18vw;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
 
         @media (max-width: 1025px) {
-            width: 50%;
-            top: -15%;
-            left: 25%;
+            width: 45%;
+            top: 35%;
+            left: 50%;
+            height: auto;
+            transform: translate(-50%, -50%);
         }
     }
 `;
