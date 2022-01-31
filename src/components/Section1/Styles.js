@@ -40,7 +40,8 @@ export const Logo = styled.img`
 
 export const Text = styled.div`
     position: relative;
-    top: 90px;
+    /* top: 90px; */
+    opacity: 0;    
 
     @media (max-width: 1025px) {
         top: 50px;
@@ -154,9 +155,10 @@ export const RightContent = styled.div`
         height: 42vw;
         position: absolute;
         top: 10%;
-        right: 135px;
+        right: 0px;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
-        border-radius: 2vw; 
+        border-radius: 2vw;
+        opacity: 0; 
     }
 
     @media (max-width: 1025px) {
