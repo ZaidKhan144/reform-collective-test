@@ -48,6 +48,7 @@ export const Arrows = styled.div`
     justify-content: flex-end;
     align-items: center;
     z-index: ${({ theme: { zIndex } }) => zIndex.z5 };
+    opacity: 0;
 
     @media (max-width: 1025px) {
         padding: 35px 40px
@@ -68,11 +69,14 @@ export const Arrows = styled.div`
 
 export const CarCarousel = styled.div`
     position: absolute;
+    /* opacity: 0; */
+    /* top: initial; */
 `;
 
 export const CarDesc = styled.div`
    display: flex;
    flex-direction: column;
+   opacity: 0;
    
    & h4 {
       font-family: Bebas Neue;
@@ -159,15 +163,18 @@ export const CarConfig = styled.div`
 
 export const Car = styled.div`
         position: absolute;
-        width: 700px;
+        /* width: 700px; */
         width: 55vw;
         /* top: 400px; */
-        left: 200px; 
+        /* left: 200px;  */
         bottom: -85px;
 
         & img {
+            position: absolute;
             display: block;
             width: 55vw;
+            opacity: 0;
+            bottom: 0px;
         }
 
     @media (max-width: 1025px) {
@@ -216,6 +223,7 @@ export const Text = styled.div`
         letter-spacing: -0.46px;
         margin: 0;
         color: ${({ theme: { colors } }) => colors.greyText };
+        opacity: 0;
 
         @media (max-width: 1025px) {
             font-size: 45px;
@@ -231,6 +239,7 @@ export const Text = styled.div`
         line-height: 26px;
         letter-spacing: -0.47px;
         max-width: 70%;
+        opacity: 0;
 
         @media (max-width: 1025px) {
             font-size: 3.5vw;

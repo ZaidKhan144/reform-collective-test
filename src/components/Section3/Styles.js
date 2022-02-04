@@ -58,6 +58,7 @@ export const Text = styled.div`
         margin: 0;
         margin-top: 30px;
         width: 338px;
+        opacity: 0;
 
         @media (max-width: 1025px) {
             width: 100%;
@@ -85,7 +86,8 @@ export const RightContent = styled.div`
         position: absolute;
         /* width: 500px; */
         width: 40vw;
-        left: -40%;
+        left: -70%;
+        opacity: 0;
         bottom: -10%;
 
         @media (max-width: 1025px) {
@@ -96,10 +98,11 @@ export const RightContent = styled.div`
     & img:nth-child(3) {
         position: absolute;
         left: 50%;
-        top: -10%;
+        top: -50%;
         /* width: 300px; */
         width: 18vw;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
+        opacity: 0;
 
         @media (max-width: 1025px) {
             width: 45%;
