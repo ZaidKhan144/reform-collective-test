@@ -35,6 +35,8 @@ const carInfo = [
 
 const Section2 = (props) => {
 
+    const [ carIndex, setCarIndex ] = useState(0)
+
     const yellowBackground = useRef(null)
     const headingText = useRef(null)
     const text = useRef(null)
@@ -42,13 +44,6 @@ const Section2 = (props) => {
     const carousel = useRef([])
     const arrow = useRef(null)
 
-    const [ carIndex, setCarIndex ] = useState(0)
-
-    useEffect(() => {
-      
-        yellowAnimation()
-    }, []);
-    
 
     const handleClickPrev = () => {
         let prevIndex = carIndex;
@@ -62,10 +57,10 @@ const Section2 = (props) => {
         }
 
         setCarIndex(index)
+        
         if(!props.mobileWidth) {
             finalCarAnimation(prevIndex)
             initialCarAnimation(index)
-            // carouselDescAnimation(index)
         }
     }
 
@@ -81,10 +76,10 @@ const Section2 = (props) => {
         }
 
         setCarIndex(index)
+        
         if(!props.mobileWidth) {
             finalCarAnimation(prevIndex)
             initialCarAnimation(index)
-            // carouselDescAnimation(index)
         }
     }
 
@@ -96,8 +91,9 @@ const Section2 = (props) => {
             width: '40%',
             scrollTrigger: yellowBackground.current,
             onComplete: () => {
-                headingTextAnimation()
                 initialCarAnimation(carIndex)
+                arrowAnimation()
+                headingTextAnimation()
             }
         })
     }
@@ -125,52 +121,36 @@ const Section2 = (props) => {
         })
     }
 
-    const carouselDescAnimation = (index) => {
+    const initialCarAnimation = (index) => {
         gsap.fromTo(carousel.current[index], {
-            y: '-100px',
-            opacity: 0,
+            y: '100',
         }, {
-            y: '0px',
+            y: '0',
             duration: 0.5,
             opacity: 1
         })
-    }
 
-    const initialCarAnimation = (index) => {
         gsap.fromTo(carRef.current[index], {
             left: '100%'
         }, {
             duration: 1,
             opacity: 1,
             left: '0%',
-            onComplete: () => {
-                carouselDescAnimation(carIndex)
-                arrowAnimation()
-            }
         })
-        
     }
 
     const finalCarAnimation = (index) => {
-        // gsap.to(carousel.current[index], {
-        //     duration: 0.5,
-        //     opacity: 0,
-        //     y: '200%'
-        // })
-
-        // My ref is not working
-        gsap.to(carRef.current[index], {
+        gsap.to(carousel.current[index], {
+            y: '-100px',
+            opacity: 0,
             duration: 0.5,
-            opacity: 1,
-            left: '-200%'
         })
 
-        // gsap.fromTo(`.porsche-${index}`, {
-
-        // }, {
-
-        // })
-        
+        gsap.to(carRef.current[index], {
+            duration: 0.5,
+            opacity: 0,
+            left: '-200%'
+        })
     }
 
     const arrowAnimation = () => {
@@ -179,8 +159,12 @@ const Section2 = (props) => {
           opacity: 1,
         });
       }
-      // undefined is the car
-      // null is the carousel data
+
+      useEffect(() => {
+      
+        yellowAnimation()
+        
+    }, []);
     
     return (
         <SectionTwo>
@@ -194,8 +178,8 @@ const Section2 = (props) => {
                         return (
                             <div key={index}>
                                 <CarCarousel>
-                                    { index === carIndex && 
-                                        <CarDesc ref={ref => { carousel.current[index] = ref }}>
+                                    { 
+                                        <CarDesc ref={ref => { if (ref) carousel.current[index] = ref }} >
                                             <h4>{carData.carName}</h4>
                                             <p>{carData.model}</p>
                                             <CarConfig>
@@ -219,13 +203,14 @@ const Section2 = (props) => {
                                                 </div>
                                                 <p>{carData.accMeter}</p>
                                             </CarConfig>
-                
                                         </CarDesc> 
                                     }
                                 </CarCarousel>
                                 <Car>
-                                    {
-                                        index === carIndex && <img className={`porsche-${index}`} src={carData.image} ref={ref => { carRef.current[index] = ref }} />
+                                    { <img 
+                                        className={`porsche-${index}`} 
+                                        src={carData.image}
+                                        ref={ref => { if (ref) carRef.current[index] = ref }} /> 
                                     }
                                 </Car>
                             </div>      

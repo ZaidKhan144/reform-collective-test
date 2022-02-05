@@ -39,7 +39,6 @@ export const LeftContent = styled.div`
 
 export const Arrows = styled.div`
     position: absolute;
-    z-index: 4;
     padding: 45px;
     top: 0;
     left: 0;
