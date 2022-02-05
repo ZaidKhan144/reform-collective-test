@@ -31,7 +31,8 @@ export const LeftContent = styled.div`
     & img:first-child {
         position: absolute;
         bottom: 0;
-        left: 25%;
+        left: 0;
+        opacity: 0;
         width: 50%;
 
         @media (max-width: 1025px) {
@@ -43,8 +44,9 @@ export const LeftContent = styled.div`
     & img:nth-child(2) {
         position: absolute;
         bottom: -10%;
-        left: 25%;
+        left: 0;
         width: 100%;
+        opacity: 0;
 
         @media (max-width: 1025px) {
             display: none;
@@ -57,6 +59,7 @@ export const RightContent = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 50%;
+    opacity: 0;
 
     @media (max-width: 1025px) {
         width: 100%;   
