@@ -35,6 +35,8 @@ export const LeftContent = styled.div`
     & img:nth-child(2) {
         position: absolute;
         left: 55%;
+        top: -20%;
+        opacity: 0;
         width: 70%;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
         border-radius: 2.2vw;
@@ -71,6 +73,7 @@ export const Text = styled.div`
         color: ${({ theme: { colors } }) => colors.greyText };
         margin: 0;
         max-width: 90%;
+        opacity: 0;
 
         @media (max-width: 1025px) {
             font-size: 45px;
@@ -88,6 +91,7 @@ export const Text = styled.div`
         letter-spacing: -0.47px;
         text-align: left;
         width: 60%;
+        opacity: 0;
 
         @media (max-width: 1025px) {
             width: 100%;
