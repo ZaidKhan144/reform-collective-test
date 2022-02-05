@@ -23,6 +23,7 @@ export const Card = styled.div`
     justify-content: center;
     /* padding: 67px; */
     padding: 3.5vw;
+    opacity: 0;
 
     @media (max-width: 1025px) {
         width: 100%;

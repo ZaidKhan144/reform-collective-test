@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { SectionFive, Card } from './Styles';
 
 import icon1 from '../../assets/images/icon-1.png'
 import icon2 from '../../assets/images/icon-2.png'
 import icon3 from '../../assets/images/icon-3.png'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cardInfo = [
     {
@@ -24,12 +29,49 @@ const cardInfo = [
 ]
 
 const Section5 = () => {
+
+    const cardRef = useRef([])
+
+    const cardsAnimation = (index) => {
+        gsap.fromTo(cardRef.current[index], {
+            y: '-100',
+            opacity: 0,
+        }, {
+            y: '0',
+            duration: 1,
+            opacity: 1,
+            onComplete: () => {
+                index = index + 1;
+        
+                if (index < cardInfo.length) {
+                    cardsAnimation(index);
+                }
+              }
+        })
+    }
+
+    useEffect(() => {
+    gsap.fromTo(cardRef.current[0], {
+        y: '-100',
+        opacity: 0,
+    }, {
+        y: '0',
+        duration: 1,
+        opacity: 1,
+        scrollTrigger: cardRef.current[0],
+        onComplete: () => {
+            cardsAnimation(1)
+        }
+    })
+    }, []);
+    
+
   return (
     <SectionFive>
         {
             cardInfo.map((cardData, index) => {
                 return (
-                    <Card key={index}>
+                    <Card ref={ref => { if (ref) cardRef.current[index] = ref }} key={index}>
                         <img src={cardData.image} />
                         <h6>{cardData.title}</h6>
                         <p>{cardData.text}</p>
