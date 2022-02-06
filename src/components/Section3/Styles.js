@@ -45,6 +45,7 @@ export const Text = styled.div`
             height: auto;
             line-height: 48px;
             letter-spacing: -0.22px;
+            opacity: 1;
         }
     }
 
@@ -65,6 +66,7 @@ export const Text = styled.div`
             margin-top: 15px;
             font-size: 3.5vw;
             height: auto;
+            opacity: 1;
         }
     }
 `;
@@ -110,6 +112,7 @@ export const RightContent = styled.div`
             left: 50%;
             height: auto;
             transform: translate(-50%, -50%);
+            opacity: 1;
         }
     }
 `;

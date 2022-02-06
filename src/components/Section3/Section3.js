@@ -9,7 +9,7 @@ import delivery from '../../assets/images/delivery.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section3 = () => {
+const Section3 = (props) => {
 
   const mapRef = useRef(null)
   const title = useRef(null)
@@ -18,25 +18,37 @@ const Section3 = () => {
   const phone = useRef(null)
   
   useEffect(() => {
-    gsap.fromTo(mapRef.current, {
-      width: '0%',
-    }, {
-      duration: 1,
-      width: '100%',
-      scrollTrigger: mapRef.current
-    })
-    gsap.from(title.current, {
-      y: '-200',
-      scrollTrigger: title.current,
-      duration: 1,
-      opacity: 0.5,
-      onComplete: () => {
-        textAnimation()
-        carAnimation()
-        phoneAnimation()
-      }
-    })
-  }, []);
+    if(!props.mobileWidth) {
+      gsap.fromTo(mapRef.current, {
+        width: '0%',
+      }, {
+        duration: 1,
+        width: '100%',
+        clearProps: "all",
+        scrollTrigger: mapRef.current
+      })
+      gsap.from(title.current, {
+        y: '-200',
+        scrollTrigger: title.current,
+        duration: 1,
+        opacity: 0.5,
+        onComplete: () => {
+          textAnimation()
+          carAnimation()
+          phoneAnimation()
+        }
+      })
+    } else {
+      gsap.set(title.current, {
+        y: '0',
+        display: 'block',
+        opacity: 1,
+      })
+      gsap.set(mapRef.current, {
+        width: 'calc(100% + 20px + 20px)'
+      })
+    }
+  }, [props.mobileWidth]);
 
   const textAnimation = () => {
     gsap.fromTo(text.current, {
@@ -46,6 +58,7 @@ const Section3 = () => {
       y: '0',
       opacity: 1,
       duration: 1,
+      clearProps: "all",
     })
   }
 
@@ -66,7 +79,6 @@ const Section3 = () => {
     })
   }
   
-
   return (
     <SectionThree>
         <LeftContent>
