@@ -11,7 +11,7 @@ import car3 from '../../assets/images/car3.png'
 import phoneScreen from '../../assets/images/phone-sec1.png'
 
 
-const Section1 = () => {
+const Section1 = (props) => {
 
     const yellowBackground = useRef(null)
     const cars = useRef(null)
@@ -19,10 +19,14 @@ const Section1 = () => {
     const phone = useRef(null)
 
     useEffect(() => {
+        gsap.set(cars.current, { clearProps: "all"})
 
-        yellowAnimation();
-        carsAnimation();
-    }, []);
+        if(!props.mobileWidth) {
+            yellowAnimation();
+            carsAnimation();
+        }
+         
+    }, [props.mobileWidth]);
     
     const yellowAnimation = () => {
         gsap.from(yellowBackground.current, { 
@@ -47,7 +51,7 @@ const Section1 = () => {
         gsap.to(text.current, {
             top: '90px',
             opacity: 1,
-            duration: 0.5
+            duration: 0.5,
         })
     }
 

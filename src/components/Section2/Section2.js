@@ -89,6 +89,7 @@ const Section2 = (props) => {
         }, {
             duration: 1, 
             width: '40%',
+            clearProps: "all",
             scrollTrigger: yellowBackground.current,
             onComplete: () => {
                 initialCarAnimation(carIndex)
@@ -161,10 +162,15 @@ const Section2 = (props) => {
       }
 
       useEffect(() => {
-      
+          
+      if(!props.mobileWidth) {
         yellowAnimation()
-        
-    }, []);
+      } else {
+        gsap.set(yellowBackground.current, {
+            width: '100%'
+        })
+      }
+    }, [props.mobileWidth]);
     
     return (
         <SectionTwo>
@@ -178,8 +184,7 @@ const Section2 = (props) => {
                         return (
                             <div key={index}>
                                 <CarCarousel>
-                                    { 
-                                        <CarDesc ref={ref => { if (ref) carousel.current[index] = ref }} >
+                                    { props.mobileWidth ? (index === carIndex && <CarDesc>
                                             <h4>{carData.carName}</h4>
                                             <p>{carData.model}</p>
                                             <CarConfig>
@@ -203,11 +208,40 @@ const Section2 = (props) => {
                                                 </div>
                                                 <p>{carData.accMeter}</p>
                                             </CarConfig>
-                                        </CarDesc> 
+                                        </CarDesc>) : (<CarDesc ref={ref => { if (ref) carousel.current[index] = ref }} >
+                                            <h4>{carData.carName}</h4>
+                                            <p>{carData.model}</p>
+                                            <CarConfig>
+                                                <div>
+                                                    <img src={mpgImage} />
+                                                    <p>MPG</p>
+                                                </div>
+                                                <p>{carData.mpg}</p>
+                                            </CarConfig>
+                                            <CarConfig>
+                                                <div>
+                                                    <img src={hpImage} />
+                                                    <p>HP</p>
+                                                </div>
+                                                <p>{carData.hp}</p>
+                                            </CarConfig>
+                                            <CarConfig>
+                                                <div>
+                                                    <img src={accImage} />
+                                                    <p>0-60</p>
+                                                </div>
+                                                <p>{carData.accMeter}</p>
+                                            </CarConfig>
+                                        </CarDesc>)
                                     }
                                 </CarCarousel>
                                 <Car>
-                                    { <img 
+                                    {
+                                        props.mobileWidth ? (index === carIndex && <img 
+                                        className={`porsche-${index}`} 
+                                        src={carData.image}
+                                        />) :
+                                        <img 
                                         className={`porsche-${index}`} 
                                         src={carData.image}
                                         ref={ref => { if (ref) carRef.current[index] = ref }} /> 

@@ -1,6 +1,7 @@
 import GlobalStyle from './GlobalStyle';
 import Theme from './Theme';
 import { useState, useEffect } from 'react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Section1 from './components/Section1/Section1';
 import Section2 from './components/Section2/Section2';
@@ -17,6 +18,9 @@ const App = () => {
   const updateDimensions = () => {
     let mobileWidth = window.innerWidth < 1025
     setMobileWidth(mobileWidth)
+    if (mobileWidth) {
+      ScrollTrigger.getAll().forEach(ST => {ST.kill({revert: true})})
+    }
   }
 
   useEffect(() => {

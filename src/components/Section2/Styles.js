@@ -50,7 +50,8 @@ export const Arrows = styled.div`
     opacity: 0;
 
     @media (max-width: 1025px) {
-        padding: 35px 40px
+        padding: 35px 40px;
+        opacity: 1;
     }
     
     & img {
@@ -76,6 +77,10 @@ export const CarDesc = styled.div`
    display: flex;
    flex-direction: column;
    opacity: 0;
+
+   @media (max-width: 1025px) {
+       opacity: 1;
+   }
    
    & h4 {
       font-family: Bebas Neue;
@@ -183,6 +188,7 @@ export const Car = styled.div`
 
         & img {
             width: 100%;
+            opacity: 1;
         }
     }
 
@@ -228,6 +234,7 @@ export const Text = styled.div`
             font-size: 45px;
             line-height: 48px;
             letter-spacing: -0.22px;
+            opacity: 1;
         }
     }
 
@@ -244,6 +251,7 @@ export const Text = styled.div`
             font-size: 3.5vw;
             line-height: 5vw;
             max-width: 100%;
+            opacity: 1;
         }
     }
 `;

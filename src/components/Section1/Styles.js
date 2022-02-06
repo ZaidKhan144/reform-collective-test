@@ -46,6 +46,7 @@ export const Text = styled.div`
     @media (max-width: 1025px) {
         top: 50px;
         width: 90%;
+        opacity: 1;
     }
 
     & h1 {
