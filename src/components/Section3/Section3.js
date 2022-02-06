@@ -47,6 +47,9 @@ const Section3 = (props) => {
       gsap.set(mapRef.current, {
         width: 'calc(100% + 20px + 20px)'
       })
+      gsap.set(phone.current, {
+        clearProps: "all"
+      })
     }
   }, [props.mobileWidth]);
 

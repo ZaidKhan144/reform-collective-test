@@ -33,6 +33,9 @@ const Section4 = (props) => {
       gsap.set(left.current, {
         width: '80%'
       })
+      gsap.set(phone.current, {
+        clearProps: "all",
+      })
     }
   }, [props.mobileWidth]);
 

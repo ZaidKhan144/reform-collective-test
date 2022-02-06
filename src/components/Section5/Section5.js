@@ -28,7 +28,7 @@ const cardInfo = [
     }
 ]
 
-const Section5 = () => {
+const Section5 = (props) => {
 
     const cardRef = useRef([])
 
@@ -51,19 +51,27 @@ const Section5 = () => {
     }
 
     useEffect(() => {
-    gsap.fromTo(cardRef.current[0], {
-        y: '-100',
-        opacity: 0,
-    }, {
-        y: '0',
-        duration: 1,
-        opacity: 1,
-        scrollTrigger: cardRef.current[0],
-        onComplete: () => {
-            cardsAnimation(1)
+        if (!props.mobileWidth) {
+            gsap.fromTo(cardRef.current[0], {
+                y: '-100',
+                opacity: 0,
+            }, {
+                y: '0',
+                duration: 1,
+                opacity: 1,
+                scrollTrigger: cardRef.current[0],
+                onComplete: () => {
+                    cardsAnimation(1)
+                }
+            })
+        } else {
+            gsap.set(cardRef.current[0], {
+                top: 'unset',
+                opacity: 1,
+                clearProps: "all",
+            })
         }
-    })
-    }, []);
+    }, [props.mobileWidth]);
     
 
   return (

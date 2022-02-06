@@ -31,6 +31,7 @@ export const Card = styled.div`
         height: 80vw;
         padding-bottom: 12vw;
         padding-top: 12vw;
+        opacity: 1;
     }
 
     & img {
