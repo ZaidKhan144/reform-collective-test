@@ -3,6 +3,7 @@ import Theme from './Theme';
 import { useState, useEffect } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import Loading from './components/Loading/Loading';
 import Section1 from './components/Section1/Section1';
 import Section2 from './components/Section2/Section2';
 import Section3 from './components/Section3/Section3';
@@ -14,6 +15,7 @@ import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [ mobileWidth, setMobileWidth ] = useState(window.innerWidth < 1025)
+  const [ loading, setLoading ] = useState(true)
 
   const updateDimensions = () => {
     let mobileWidth = window.innerWidth < 1025
@@ -34,18 +36,24 @@ const App = () => {
     }
   }, [])
 
-  return (
-    <Theme>
-      <GlobalStyle />
-      <Section1 mobileWidth={mobileWidth} />
-      <Section2 mobileWidth={mobileWidth} />
-      <Section3 mobileWidth={mobileWidth} />
-      <Section4 mobileWidth={mobileWidth} />
-      <Section5 mobileWidth={mobileWidth} />
-      <Section6 mobileWidth={mobileWidth} />
-      <Footer mobileWidth={mobileWidth} />
-    </Theme>
-  );
+  if (loading) {
+    return (
+      <Loading setLoading={setLoading} />
+    )
+  } else {
+    return (
+      <Theme>
+        <GlobalStyle />
+        <Section1 mobileWidth={mobileWidth} />
+        <Section2 mobileWidth={mobileWidth} />
+        <Section3 mobileWidth={mobileWidth} />
+        <Section4 mobileWidth={mobileWidth} />
+        <Section5 mobileWidth={mobileWidth} />
+        <Section6 mobileWidth={mobileWidth} />
+        <Footer mobileWidth={mobileWidth} />
+      </Theme>
+    );
+  }
 }
 
 export default App;
