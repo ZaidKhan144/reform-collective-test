@@ -31,8 +31,6 @@ export const Text = styled.div`
     
     & h2 {
         font-family: Bebas Neue;
-        /* font-size: 95px;
-        line-height: 98px; */
         font-size: 5vw;
         line-height: 5vw;
         letter-spacing: -0.45px;
@@ -51,7 +49,6 @@ export const Text = styled.div`
 
     & p {
         font-family: Eina03;
-        /* font-size: 16px; */
         font-size: 1vw;
         line-height: 26px;
         letter-spacing: -0.47px;
@@ -73,20 +70,17 @@ export const Text = styled.div`
 
 export const RightContent = styled.div`
     position: relative;
-    /* height: 400px; */
     height: 32vw;
     width: 60%;
 
     @media (max-width: 1025px) {
         width: calc(100% + 20px + 20px);
         margin-top: 100px;
-        /* height: 500px; */
         height: 120vw;
     }
 
     & img:nth-child(2) {
         position: absolute;
-        /* width: 500px; */
         width: 40vw;
         left: -70%;
         opacity: 0;
@@ -101,7 +95,6 @@ export const RightContent = styled.div`
         position: absolute;
         left: 50%;
         top: -50%;
-        /* width: 300px; */
         width: 18vw;
         box-shadow: -8px 14px 31px 8px rgba(0,0,0,0.25);
         opacity: 0;

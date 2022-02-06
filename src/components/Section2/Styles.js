@@ -18,16 +18,10 @@ export const SectionTwo = styled.section`
 export const LeftContent = styled.div`
     background-color: ${({ theme: { colors } }) => colors.yellow };
     width: 40%;
-    /* height: 600px; */
     height: 40vw;
     position: relative;
-    /* padding-left: 100px;
-    padding-top: 120px; */
     padding-left: 6vw;
     padding-top: 7vw;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start; */
 
     @media (max-width: 1025px) {
         width: 100%;
@@ -69,8 +63,6 @@ export const Arrows = styled.div`
 
 export const CarCarousel = styled.div`
     position: absolute;
-    /* opacity: 0; */
-    /* top: initial; */
 `;
 
 export const CarDesc = styled.div`
@@ -84,7 +76,6 @@ export const CarDesc = styled.div`
    
    & h4 {
       font-family: Bebas Neue;
-      /* font-size: 64px; */
       font-size: 4vw;
       line-height: 75px;
       margin: 0;
@@ -97,7 +88,6 @@ export const CarDesc = styled.div`
 
    & p {
        font-family: Bebas Neue;
-       /* font-size: 17px; */
        font-size: 1vw;
        line-height: 20px;
        color: ${({ theme: { colors } }) => colors.lightGrey };
@@ -124,7 +114,6 @@ export const CarConfig = styled.div`
         display: flex;
         align-items: center;
         margin-right: 20px;
-        /* width: 76px; */
         width: 6vw;
 
         @media (max-width: 1025px) {
@@ -133,7 +122,6 @@ export const CarConfig = styled.div`
         }
 
         & img {
-            /* margin-right: 15px; */
             margin-right: 1vw;
             display: block;
             width: 1.2vw;
@@ -147,7 +135,6 @@ export const CarConfig = styled.div`
         & p{
             color: ${({ theme: { colors } }) => colors.black };
             margin: 0;
-            /* font-size: 16px; */
             font-size: 1.2vw;
             line-height: 18px;
 
@@ -167,10 +154,7 @@ export const CarConfig = styled.div`
 
 export const Car = styled.div`
         position: absolute;
-        /* width: 700px; */
         width: 55vw;
-        /* top: 400px; */
-        /* left: 200px;  */
         bottom: -85px;
 
         & img {
@@ -198,16 +182,9 @@ export const Car = styled.div`
 `;
 
 export const RightContent = styled.div`
-    /* padding-left: 140px;
-    padding-top: 40px; */
     padding-left: 8vw;
     padding-top: 3vw;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    /* justify-content: flex-start; */
     max-width: 55%;
-    /* height: 600px; */
     height: 40vw;
 
     @media (max-width: 1025px) {
@@ -222,7 +199,6 @@ export const RightContent = styled.div`
 export const Text = styled.div`
     & h2 {
         font-family: Bebas Neue;
-        /* font-size: 95px; */
         font-size: 5vw;
         line-height: 98px;
         letter-spacing: -0.46px;
@@ -240,7 +216,6 @@ export const Text = styled.div`
 
     & p {
         font-family: Eina03;
-        /* font-size: 16px; */
         font-size: 1vw;
         line-height: 26px;
         letter-spacing: -0.47px;

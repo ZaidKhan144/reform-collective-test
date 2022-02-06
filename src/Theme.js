@@ -32,8 +32,3 @@ const Theme = ({ children }) => (
   );
 
 export default Theme
-
-// How to use
-// const Heading = styled.h1`
-//   color: ${({ theme: { colors } }) => colors.yellow };
-// `;

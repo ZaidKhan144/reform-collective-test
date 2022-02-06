@@ -21,7 +21,6 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 67px; */
     padding: 3.5vw;
     opacity: 0;
 
@@ -63,7 +62,6 @@ export const Card = styled.div`
         width: 90%;
 
         @media (max-width: 1025px) {
-            /* width: 100%; */
             font-size: 4vw;
             line-height: 5.5vw;
         }

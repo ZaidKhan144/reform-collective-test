@@ -11,10 +11,8 @@ export const SectionOne = styled.section`
 
     @media (max-width: 1025px) {
         flex-direction: column;
-        /* height: 120vw; */
         position: relative;
         width: 100%;
-        /* height: 430px; */
         height: 560px;
     }
 `;
@@ -33,14 +31,12 @@ export const Logo = styled.img`
     height: 18px;
 
     @media (max-width: 1025px) {
-        /* width: 100%; */
         height: auto;
     }
 `;
 
 export const Text = styled.div`
     position: relative;
-    /* top: 90px; */
     opacity: 0;    
 
     @media (max-width: 1025px) {

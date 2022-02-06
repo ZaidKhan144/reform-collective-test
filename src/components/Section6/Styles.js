@@ -15,7 +15,6 @@ export const SectionSix = styled.section`
 
 export const LeftContent = styled.div`
     background-color: ${({ theme: { colors } }) => colors.yellow };
-    /* height: 700px; */
     height: 35vw;
     width: 50%;
     position: relative;
@@ -24,7 +23,6 @@ export const LeftContent = styled.div`
     @media (max-width: 1025px) {
         width: calc(100% + 25px + 25px);
         margin-right: 0px;
-        /* height: 500px; */
         height: 120vw;
     }
 

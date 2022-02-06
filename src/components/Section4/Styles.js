@@ -18,7 +18,6 @@ export const SectionFour = styled.section`
 export const LeftContent = styled.div`
     background-color: ${({ theme: { colors } }) => colors.yellow };
     width: 35%;
-    /* height: 700px; */
     height: 60vw;
     position: relative;
     display: flex;
@@ -28,7 +27,6 @@ export const LeftContent = styled.div`
     @media (max-width: 1025px) {
         width: 80%;
         left: -20%;
-        /* height: 600px; */
         height: 110vw;
     }
 
@@ -65,8 +63,6 @@ export const RightContent = styled.div`
 export const Text = styled.div`
     & h2 {
         font-family: Bebas Neue;
-        /* font-size: 95px;
-        line-height: 98px; */
         font-size: 5vw;
         line-height: 5vw;
         letter-spacing: -0.45px;
@@ -87,7 +83,6 @@ export const Text = styled.div`
 
     & p {
         font-family: Eina03;
-        /* font-size: 16px; */
         font-size: 1vw;
         line-height: 26px;
         letter-spacing: -0.47px;
