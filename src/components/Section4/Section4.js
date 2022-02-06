@@ -9,7 +9,7 @@ import phoneScreen from '../../assets/images/phone-sec4.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section4 = () => {
+const Section4 = (props) => {
 
   const left = useRef(null)
   const phone = useRef(null)
@@ -17,17 +17,24 @@ const Section4 = () => {
   const text = useRef(null)
 
   useEffect(() => {
-    gsap.fromTo(left.current, {
-      width: '0%',
-    }, {
-      duration: 1,
-      width: '35%',
-      scrollTrigger: phone.current,
-      onComplete: () => {
-        phoneAnimation()
-      }
-    })
-  }, []);
+    if(!props.mobileWidth) {
+      gsap.fromTo(left.current, {
+        width: '0%',
+      }, {
+        duration: 1,
+        width: '35%',
+        scrollTrigger: phone.current,
+        clearProps: "all",
+        onComplete: () => {
+          phoneAnimation()
+        }
+      })
+    } else {
+      gsap.set(left.current, {
+        width: '80%'
+      })
+    }
+  }, [props.mobileWidth]);
 
   const phoneAnimation = () => {
     gsap.to(phone.current, {
@@ -65,19 +72,18 @@ const Section4 = () => {
     })
   }
   
-
   return (
     <SectionFour>
         <LeftContent ref={left}>
-            <img src={car} />
-            <img ref={phone} src={phoneScreen} />
+          <img src={car} />
+          <img ref={phone} src={phoneScreen} />
         </LeftContent>
         <RightContent>
             <Text>
-                <h2 ref={title}>Trade in your car every month.</h2>
-                <p ref={text}>Use Eleanor Trade-In Credits to trade 
-                in your vehicle for something else in our luxurious inventory. 
-                Nothing says “June” like a new car!</p>
+              <h2 ref={title}>Trade in your car every month.</h2>
+              <p ref={text}>Use Eleanor Trade-In Credits to trade 
+              in your vehicle for something else in our luxurious inventory. 
+              Nothing says “June” like a new car!</p>
             </Text>
         </RightContent>
     </SectionFour>

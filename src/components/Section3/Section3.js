@@ -58,7 +58,6 @@ const Section3 = (props) => {
       y: '0',
       opacity: 1,
       duration: 1,
-      clearProps: "all",
     })
   }
 

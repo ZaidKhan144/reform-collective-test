@@ -48,6 +48,7 @@ export const LeftContent = styled.div`
             left: 100%;
             top: 50%;
             transform: translate(-50%, -50%);
+            opacity: 1;
         }
     }
 `;
@@ -80,6 +81,7 @@ export const Text = styled.div`
             line-height: 48px;
             letter-spacing: -0.22px;
             max-width: 100%;
+            opacity: 1;
         }
     }
 
@@ -96,6 +98,7 @@ export const Text = styled.div`
         @media (max-width: 1025px) {
             width: 100%;
             font-size: 3.5vw;
+            opacity: 1;
         }
     }
 `;
