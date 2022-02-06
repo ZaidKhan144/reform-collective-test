@@ -38,6 +38,7 @@ export const LeftContent = styled.div`
         @media (max-width: 1025px) {
             left: 15%;
             width: 70%;
+            opacity: 1;
         }
     }
 
@@ -62,7 +63,8 @@ export const RightContent = styled.div`
     opacity: 0;
 
     @media (max-width: 1025px) {
-        width: 100%;   
+        width: 100%;
+        opacity: 1;   
     }
 `;
 

@@ -9,7 +9,7 @@ import arrow from '../../assets/images/arrow-right.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section6 = () => {
+const Section6 = (props) => {
 
   const left = useRef(null)
   const manRef = useRef(null)
@@ -17,19 +17,29 @@ const Section6 = () => {
   const right = useRef(null)
 
   useEffect(() => {
-    gsap.fromTo(left.current, {
-      width: '0%'
-    }, {
-      width: '50%',
-      duration: 1,
-      scrollTrigger: manRef.current,
-      onComplete: () => {
-        manAnimation()
-        carAnimation()
-        rightAnimation()
-      }
-    })
-  }, []);
+    if (!props.mobileWidth) {
+      gsap.fromTo(left.current, {
+        width: '0%'
+      }, {
+        width: '50%',
+        duration: 1,
+        clearProps: "all",
+        scrollTrigger: manRef.current,
+        onComplete: () => {
+          manAnimation()
+          carAnimation()
+          rightAnimation()
+        }
+      })
+    } else {
+      gsap.set(left.current, {
+        width: 'calc(100% + 25px + 25px)'
+      })
+      gsap.set(manRef.current, {
+        clearProps: "all"
+      })
+    }
+  }, [props.mobileWidth]);
 
   const manAnimation = () => {
     gsap.to(manRef.current, {
